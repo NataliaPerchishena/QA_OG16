@@ -1,7 +1,7 @@
 a = int(input('input a\n'))
 print(a*2, a, a)
 
-
+gggg
 
 #eval = eval(input('Введіть математичний вираз:\n'))
 #print(eval)
