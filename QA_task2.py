@@ -1,7 +1,15 @@
 #function calc
 def calculate():
-    number_1 = int(input('Please enter the first number: '))
-    number_2 = int(input('Please enter the second number: '))
+    try:
+        number_1 = float(input('Please enter the first number: '))
+    except ValueError:
+        print('You have not typed, please run the program again.')
+        calculate()
+    try:
+        number_2 = float(input('Please enter the second number: '))
+    except ValueError:
+        print('You have not typed, please run the program again.')
+        calculate()
     operation = input('''
         Please type in the math operation you would like to complete:
          + for addition
@@ -22,6 +30,7 @@ def calculate():
         print('{} / {} = '.format(number_1, number_2))
         print(number_1 / number_2)
     else:
+
         print('You have not typed a valid operator, please run the program again.')
     # Добавление функции again() в calculate()
     again()
